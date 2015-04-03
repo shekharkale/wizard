@@ -1,0 +1,156 @@
+@import "foundation/settings";
+@import "foundation";
+@import "normalize";
+
+// Main Region
+.wizard-container {
+    font-family: Arial;
+    font-size: 12px;
+    background-color: $smoke;
+    color: $charcoal;
+    position: relative;
+    min-height: 500px;
+    width: 800px;
+
+}
+.ui-dialog .ui-dialog-content {
+    padding: 0;
+}  
+
+.wizard-main {
+    background-color: #ffddee;
+    position: absolute;
+    right: 120px;
+    top: 50px;
+    height: 400px;
+    width: 70%;
+    overflow: auto;
+}
+
+.wizard-header {
+    position: absolute;
+    background-color: $macys-blue;
+    top: 0px;
+    right: 120px;
+    width: 70%;
+    height: 50px;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+
+    .header-title {
+        width:100%;
+    }
+
+    .title {
+        display:inline;
+        float:left;
+        width: 75%;        
+    };
+    .wdate {
+        float:right;
+        display:inline;
+
+    }
+}
+
+.wizard-step{
+    background-color: $ghost;
+    .step-title{
+        font-family: arial;
+        font-size: 1.3em;
+        margin-top:0.5em;
+        margin-lett:20em;
+
+    }
+}
+
+.wizard-footer {
+    position: absolute;
+    background-color: $macys-lblue;
+    top: 450px;
+    right: 120px;
+    width: 70%;
+    height: 50px;
+    overflow: auto;
+
+    .wfooter {
+        float:right;
+    }
+}
+
+
+.lm100 {
+    margin-left: -24em;
+}
+
+.macys-text {
+    color: $macys-red;
+}
+
+.wizard-nav {
+    position: absolute;
+    top: 10%;
+    width: 15%;
+    height: 100%;
+
+}
+.wizard-left {
+    background-color: $macys-blue;
+    left: 0px;
+    .step {
+        height:100%;
+    }
+
+}
+
+.wizard-right {
+    background-color: $macys-blue;
+    right: 0px;
+    float: right;
+}
+
+.macys-group {
+    @include button-group-container($styles:true, $float:false);
+
+    margin-top:8px;
+    .macys-button {
+        @include button;
+        color: $macys-red;
+        background-color: $macys-group-color;
+        padding: 0.5rem 1rem;
+        margin-bottom: 0.4rem;
+        margin-right:0.3rem;
+    }
+    & > li { @include button-group-style(
+            $radius:true,
+            $float:left); 
+        }
+    & > li:first-child {
+        margin-right:5px;
+    }
+
+    
+}
+
+.macys-group.round {
+    & > *:first-child,
+    & > *:first-child > a,
+    & > *:first-child > .macys-button,
+     {
+        border-bottom-left-radius: 1000px;
+        border-top-left-radius: 1000px; 
+    }
+}
+
+.macys-group.round 
+{  
+    & > *:last-child,
+    & > *:last-child > a, 
+    & > *:last-child > macys-button, 
+    & > *:last-child > .macys-button 
+    {
+       border-bottom-right-radius: 1000px;
+        border-top-right-radius: 1000px;
+    }
+}

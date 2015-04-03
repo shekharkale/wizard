@@ -1,0 +1,20 @@
+Wizard - 
+1. Has 4 steps
+    Intro
+    Product
+    Transaction
+    Finish.
+
+2. Shows the current step at the top.
+3. Has 3 buttons
+    Next, Prev, Cancel.
+-----
+UX
+1. Has 5 regions
+    left, top, right, bottom, center.
+
+2. left has steps and info.
+3. top has title for current step.
+4. right has description of current step.
+4. bottom has buttons.
+5. Has x on right top to cancel the wizard.

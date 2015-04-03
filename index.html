@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   My Application home page.
+    <title>My Wizard</title>
+    <link type="text/css" href="./css/jquery-ui-1.10.0.custom.css" rel="stylesheet">
+    <link type="text/css" href="./css/application.css" rel="stylesheet">
+  </head>
+  <body>
+	<div id="wizardHere">Wizard</div>
+    <script type="application/javascript" src="./js/vendor/require.js"></script>
+    <script type="application/javascript" src="./js/require_main.js"></script>
+    <script type="application/javascript">
+      require(["jquery"], function($){
+        $(document).ready(function() {
+          require(["js/wizard"], function(Wizard){
+            var options = {
+              wizID: "wizardHere",
+              title: "Test wizard with Marionette.",
+              description: "This wizard will guide you to achieve final step and a lot more if you really need it. Click on next after you have completed with this page.",
+              steps: [
+                {title: "step1", desc : "This is 1st step"},
+                {title: "step2", desc : "This is 2nd step"},
+                {title: "step3", desc : "This is last step"}
+              ]
+
+            };
+            Wizard.start(options);
+          });
+
+        });
+      });
+   </script>
+  </body>  
+</html>
